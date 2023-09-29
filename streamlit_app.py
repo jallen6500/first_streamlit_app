@@ -46,7 +46,7 @@ except URLError as e:
   
 streamlit.write('The user entered ', fruit_choice)
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 # Cleans up the json 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
